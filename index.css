@@ -130,10 +130,41 @@ li {
 
 .slider_text {
   position: absolute;
-  color: white;
+  font-size: 1.2em;
   left: 1em;
   bottom: 1em;
-  mix-blend-mode: difference;
+  line-height: 1.5;
+  letter-spacing: 0.3em;
+  font-family: fantasy;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  transition: all 1s;
+}
+.slider_text:hover {
+  text-shadow: -400px 0 tomato, 400px 0 yellowgreen, 0 0 skyblue;
+}
+.slider_text._1 {
+  left: 1em;
+  top: 1em;
+}
+.slider_text._2 {
+  background-color: black;
+  left: 13em;
+  bottom: 1em;
+}
+.slider_text._3 {
+  bottom: 19em;
+  left: 1em;
+  color: black;
+  background-color: burlywood;
+}
+.slider_text._4 {
+  background-color: white;
+  bottom: 19em;
+  color: green;
 }
 .carousel__snapper {
   position: absolute;
@@ -241,4 +272,52 @@ li {
 
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1 {
+  display: inline-block;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 7em;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+}
+h1:after {
+  content: attr(data-shadow);
+  position: absolute;
+  top: 0.06em;
+  left: 0.06em;
+  z-index: -1;
+  text-shadow: none;
+  background-image: linear-gradient(
+    45deg,
+    transparent 45%,
+    hsla(48, 20%, 90%, 1) 45%,
+    hsla(48, 20%, 90%, 1) 55%,
+    transparent 0
+  );
+  background-size: 0.05em 0.05em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shad-anim 15s linear infinite;
+}
+
+@keyframes shad-anim {
+  0% {
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 100% -100%;
+  }
 }
