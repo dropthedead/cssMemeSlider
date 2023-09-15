@@ -131,12 +131,10 @@ li {
 
 .slider_text {
   position: absolute;
-  background-color: white;
-  bottom: 20em;
-  z-index: 999;
-  left: 20em;
-  width: 4rem;
-  height: 4rem;
+  color: white;
+  left: 1em;
+  bottom: 1em;
+  mix-blend-mode: difference;
 }
 .carousel__snapper {
   position: absolute;
