@@ -129,6 +129,15 @@ li {
   font-size: 2em;
 }
 
+.slider_text {
+  position: absolute;
+  background-color: white;
+  bottom: 20em;
+  z-index: 999;
+  left: 20em;
+  width: 4rem;
+  height: 4rem;
+}
 .carousel__snapper {
   position: absolute;
   top: 0;
